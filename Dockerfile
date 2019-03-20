@@ -15,7 +15,7 @@ RUN aptitude -y --without-recommends \
 # Install any needed packages specified in requirements.txt
 RUN pip install --upgrade setuptools
 RUN pip install --upgrade wheel
-RUN pip install six cffi pynacl cryptography pysftp BeautifulSoup4 mysql-connector ConcurrentLogHandler pyfcm elasticstack django_jenkins xmlrunner django_redis django-redis-cache django-cors-headers Django==1.7.11
+RUN pip install six cffi pynacl cryptography pysftp BeautifulSoup4 xlrd SQLAlchemy mysql-connector ConcurrentLogHandler pyfcm elasticstack django_jenkins xmlrunner django_redis django-redis-cache django-cors-headers Django==1.7.11
 
 # Install tensorflow
 RUN pip install --upgrade cffi
@@ -26,3 +26,7 @@ RUN pip install --upgrade --ignore-installed tensorflow
 
 # Install Deepcut
 RUN pip install --upgrade --ignore-installed deepcut
+
+RUN pip install psutil
+
+RUN pip install --upgrade pip
